@@ -4,9 +4,6 @@
     font-family: 'Oswald', sans-serif;
 }
 
-body {
-    margin: 0;
-}
 
 header {
     text-align: center;
@@ -19,38 +16,42 @@ h1 {
     border-radius: 30px;
     padding: 0.6rem;
 }
-/*
+
 main {
+    margin: 0;
     display: flex;
 }
-*/
+
 
 .flexbox {
+    justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2rem;
+}
+
+.grid {
     justify-content: center;
-}
-
-main {
     display: grid;
-    grid-template-columns: 4fr 4fr;
-    grid-template-areas: art1 art2;
-    
-    ;
+    gap: 2rem;
+    grid-template-columns: auto auto auto auto;
 }
 
-.art1 {
-    grid-area: art1;
-}
-
-.art2 {
-    grid-area: art2;
-}
-
-article{
-    border: 2px blue solid;
+.flexbox > article{
+    margin-bottom: 10px;
+    border: 4px blue solid;
     border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(111, 111, 255);
+}
+
+.grid > article {
+    border: 4px blue solid;
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(111, 111, 255);
 }
 
 img {
