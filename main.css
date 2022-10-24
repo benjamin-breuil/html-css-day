@@ -15,14 +15,49 @@ header {
 }
 
 h1 {
-    border: 4px dashed rgb(255, 255, 255);
+    border: 6px dashed rgb(255, 255, 255);
+    border-radius: 30px;
+    padding: 0.6rem;
+}
+/*
+main {
+    display: flex;
+}
+*/
+
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-areas: art1 art2;
+    
+    ;
+}
+
+.art1 {
+    grid-area: art1;
+}
+
+.art2 {
+    grid-area: art2;
+}
+
+article{
+    border: 2px blue solid;
+    border-radius: 10px;
 }
 
 img {
     width: 50vw;
 }
 
+footer {
+    justify-content: column;
+
+}
