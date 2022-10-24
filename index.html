@@ -63,33 +63,20 @@
     </main>
     <footer>
         <h2>Formulaire de contact</h2>
-        <form action="" method="get" class="form-example">
 
-            <div>
-                <label for="name">Nom</label>
-                <input maxlength="50" type="text" name="" id="" required>
-            </div>
+        <form action="" method="post">
+            <label for="email-form">Votre adresse mail</label>
+            <input id="email-form" name="email" type="email">
 
-            <div>
-                <label for="prename">Prénom</label>
-                <input maxlength="50" type="text" name="name" id="name" required>
-            </div>
+            <label for="name-contact-form">Votre nom</label>
+            <input type="text" maxlength="50" id="name-contact-form" required>
 
-            <div>
-                <label for="email">E-Mail</label>
-                <input type="email" name="email" id="email" required>
-            </div>
+            <label for="content-contact-form">Votre demande</label>
+            <textarea name="content-contact-form" id="content-contact-form" cols="30" rows="10" placeholder="Remplissez le champs..."></textarea>
 
-            <div>
-                <label for="">Votre message : </label>
-                <textarea name="" id="" cols="30" rows="10" required></textarea>
-            </div>
-
-            <div>
-                <input type="submit" value="Envoyez">
-
-            </div>
-          </form>
+            <input type="submit" value="Soumettre">
+        </form>
+        
         <div>
             <a href="https://jobtrek.ch/">site web</a>            
         </div>
