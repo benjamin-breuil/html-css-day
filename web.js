@@ -25,12 +25,22 @@ document.getElementsByTagName('h1')[0].innerHTML = e.target.value
 
 // Compute Average
 
+function average(gradesArray){
+    let sum = 0
+
+    for (const grade of gradesArray) {
+        sum+=grade
+    }
+
+    return sum/gradesArray.length
+}
+
 // Retrieve grades
 
 function retrieveGrades(gradesID){
     let grades = []
     for (const gradesIDElement of gradesID) {
-        grades.push(document.getElementById(gradesIDElement).value)
+        grades.push(parseFloat(document.getElementById(gradesIDElement).value))
     }
 
     return grades
@@ -39,7 +49,7 @@ function retrieveGrades(gradesID){
 let inputs = document.getElementsByTagName("input")
     for(const input of inputs){
         input.addEventListener('input',function () {
-            console.log(retrieveGrades(['note1', 'note2']))
+            console.log(average(retrieveGrades(['note1', 'note2'])))
 
         })
     }
