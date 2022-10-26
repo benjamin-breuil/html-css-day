@@ -120,3 +120,15 @@ footer {
 #fb1:hover {
     background-color: #ff5c5c;
 }
+
+#notes {
+    gap: 10px;
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+}
+
+input {
+    margin: auto;
+    display: block;
+}
