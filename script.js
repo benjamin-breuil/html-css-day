@@ -43,3 +43,11 @@ function pass(avg){
 }
 
 pass(avg_test)
+
+let tab = [5]
+
+tab.push(5)
+
+tab.join(':')
+
+tab.every(e => e > 4)
