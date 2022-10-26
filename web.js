@@ -23,6 +23,10 @@ document.getElementsByTagName('h1')[0].innerHTML = e.target.value
 
 // Display Average
 
+function displayAverage(avg, id) {
+    document.getElementById(id).innerText = avg
+}
+
 // Compute Average
 
 function average(gradesArray){
@@ -40,7 +44,13 @@ function average(gradesArray){
 function retrieveGrades(gradesID){
     let grades = []
     for (const gradesIDElement of gradesID) {
-        grades.push(parseFloat(document.getElementById(gradesIDElement).value))
+        let grade = parseFloat(document.getElementById(gradesIDElement).value)
+        if (!isNaN(grade)){
+            grades.push(grade)
+        }
+
+
+    //    grades.push(parseFloat(document.getElementById(gradesIDElement).value))
     }
 
     return grades
@@ -49,7 +59,7 @@ function retrieveGrades(gradesID){
 let inputs = document.getElementsByTagName("input")
     for(const input of inputs){
         input.addEventListener('input',function () {
-            console.log(average(retrieveGrades(['note1', 'note2'])))
+            displayAverage(average(retrieveGrades(['note1', 'note2'])), 'averageSpan')
 
         })
     }
