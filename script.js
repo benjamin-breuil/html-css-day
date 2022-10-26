@@ -12,7 +12,7 @@ let o = {
 
 console.log(o.age)
 
-let test = [5,4,3]
+let test = [6,6,6]
 
 function average(tableau) {
     let total = 0
@@ -27,3 +27,19 @@ function average(tableau) {
 
 console.log(average(test))
 
+let avg_test = average(test)
+
+function pass(avg){
+
+    if(avg > 6){
+        return
+    }
+
+    if(avg >= 4 ){
+        console.log("réussie !")
+    } else {
+        console.log("raté :(")
+    }
+}
+
+pass(avg_test)
